@@ -15,5 +15,9 @@ background_color_class = "bg-black"
 recent_posts_number = 3
 
 [[params.ananke_socials]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/matei-popa-ro/"
+
+[[params.ananke_socials]]
 name = "github"
 url = "https://github.com/mattpopa"
