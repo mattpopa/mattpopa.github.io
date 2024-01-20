@@ -7,11 +7,35 @@ resourceDir = "../resources"
 [params]
 author = "Matt Popa"
 colorMode = "light"
-favicon = "images/logo_no_test.jpeg"
-site_logo = "images/logo_small.jpg"
-description = "Bringing big-league cloud expertise to businesses of all sizes. We're a specialized cloud and DevOps agency with a deep focus on AWS, Kubernetes, and CI/CD, offering over a decade of experience in crafting streamlined, secure, and scalable cloud solutions. Our mission is to simplify the cloud, making advanced technology accessible and effective for every business."
+description = "Bringing big-league cloud expertise to businesses of all sizes. We specialize in AWS, Kubernetes, and CI/CD pipelines, crafting streamlined, secure, and scalable solutions."
+showDescriptionInHeader = true
+
+[params.images]
+favicon = "images/favicon.ico"
+opengraph = "images/logo_no_text.jpeg"
+
+[params.logo]
+logo = "images/logo_small.jpg"
+logoText = "CloudCat Digital"
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 10
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 20
+
+[[menu.main]]
+identifier = "contact"
+name = "Contact"
+url = "/contact/"
+weight = 30
 
 [params.social]
 GitHub = "https://github.com/mattpopa"
 LinkedIn = "https://www.linkedin.com/in/matei-popa-devops/"
-
