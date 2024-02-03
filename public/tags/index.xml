@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on CloudCat</title>
+    <link>https://cloudcat.digital/tags/</link>
+    <description>Recent content in Tags on CloudCat</description>
+    <image>
+      <title>CloudCat</title>
+      <url>https://cloudcat.digital/images/matt.jpg</url>
+      <link>https://cloudcat.digital/images/matt.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://cloudcat.digital/tags/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

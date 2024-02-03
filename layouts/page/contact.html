@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{ .Content }}
+
+      <h1>Have a project in mind? Let's chat.</h1>
+      <br>
+      <form action="https://formspree.io/f/mayvdeee" method="POST">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="email@example.com" style="width:100%; color: var(--input-color)" required>
+        <br><br>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="hello..." rows="6" style="width:100%; height:150px; color: var(--input-color)" required></textarea>
+        <br>
+        <!-- reCAPTCHA widget -->
+        <div class="g-recaptcha" data-sitekey="6LfFldgSAAAAAKZsuk4ejWF3ng4Q-WMrvh5NF3Ty"></div>
+        <br>
+        <button type="submit">Send</button>
+      </form>
+
+      <!-- Include the Google reCAPTCHA script -->
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </div>
+  </div>
+</div>
+{{ end }}

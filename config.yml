@@ -1,0 +1,117 @@
+baseURL: "https://cloudcat.digital/"
+title: "CloudCat Digital"
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  assets:
+    favicon: "/images/favicon.png"
+    favicon16x16: "/images/favicon.png"
+    favicon32x32: "/images/favicon.png"
+    apple_touch_icon: "/images/favicon.png"
+    safari_pinned_tab: "/images/favicon.png"
+  profileMode:
+    enabled: true
+    title: "CloudCat Digital"
+    subtitle: "All Things DevOps"
+    imageUrl:  "/images/favicon.png"
+    imageTitle: "CloudCat Digital"
+    imageWidth: 300
+    imageHeight: 300
+    #buttons:
+    #  - name: "GitHub"
+    #    url: "https://github.com/mattpopa"
+    #  - name: "LinkedIn"
+    #    url: "https://www.linkedin.com/in/matei-popa-devops/"
+    #  - name: "Contact"
+    #    url: "/contact"
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/mattpopa"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/matei-popa-devops/"
+
+  env: production
+  title: CloudCat Digital
+  description: "All Things DevOps"
+  keywords: [Blog, Portfolio, DevOps, Cloud, GitOps, Kubernetes, Docker, Terraform, AWS, GCP, Azure, Automation, IaC, SRE, Observability, Monitoring, Logging, Tracing, Security, Compliance, Governance, Cost Management, Serverless, Microservices, Containers, Orchestration, Networking, Storage, Databases, Identity and Access Management, IAM, Secrets Management, Encryption, Key Management, Service Mesh, API Gateway, Load Balancing, Autoscaling, High Availability, Disaster Recovery, Backup, Restore, Data Protection, Data Privacy, Data Governance, Data Management, Data Analytics, Data Science, Machine Learning, Artificial Intelligence, AI, ML, IoT, Edge Computing]
+  author: Matt
+  images: ["/images/matt_transparency.png"]
+  DateFormat: "2 January, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  label:
+    text: "Home"
+    icon:  /images/matt_transparency.png
+    iconHeight: 35
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+
+  #editPost:
+  #  URL: "https://github.com/mattpopa"
+  #  Text: "Suggest Changes"
+  #  appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: contact
+      name: Contact
+      url: /contact
+      weight: 30
+    - identifier: About
+      name: About
+      url: /about
+      weight: 20
+    - identifier: Posts
+      name: Posts
+      url: /posts
+      weight: 10
+
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
