@@ -23,7 +23,7 @@ params:
     enabled: true
     title: "CloudCat Digital"
     subtitle: "All Things DevOps"
-    imageUrl:  "/images/favicon.png"
+    imageUrl:  "/images/logo.png"
     imageTitle: "CloudCat Digital"
     imageWidth: 300
     imageHeight: 300
