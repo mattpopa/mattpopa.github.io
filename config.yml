@@ -67,7 +67,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: ${{ secrets.G_TAG }}
+      SiteVerificationTag: "G-PQC8K5TJNR"
 
   cover:
     hidden: true
