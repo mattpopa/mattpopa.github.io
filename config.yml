@@ -27,13 +27,6 @@ params:
     imageTitle: "CloudCat Digital"
     imageWidth: 300
     imageHeight: 300
-    #buttons:
-    #  - name: "GitHub"
-    #    url: "https://github.com/mattpopa"
-    #  - name: "LinkedIn"
-    #    url: "https://www.linkedin.com/in/matei-popa-devops/"
-    #  - name: "Contact"
-    #    url: "/contact"
 
   socialIcons:
     - name: "github"
@@ -46,7 +39,7 @@ params:
   description: "All Things DevOps"
   keywords: [Blog, Portfolio, DevOps, Cloud, GitOps, Kubernetes, Docker, Terraform, AWS, GCP, Azure, Automation, IaC, SRE, Observability, Monitoring, Logging, Tracing, Security, Compliance, Governance, Cost Management, Serverless, Microservices, Containers, Orchestration, Networking, Storage, Databases, Identity and Access Management, IAM, Secrets Management, Encryption, Key Management, Service Mesh, API Gateway, Load Balancing, Autoscaling, High Availability, Disaster Recovery, Backup, Restore, Data Protection, Data Privacy, Data Governance, Data Management, Data Analytics, Data Science, Machine Learning, Artificial Intelligence, AI, ML, IoT, Edge Computing]
   author: Matt
-  images: ["/images/matt_transparency.png"]
+  images: ["/images/logo_small.jpg"]
   DateFormat: "2 January, 2006"
   defaultTheme: auto
   disableThemeToggle: false
@@ -74,17 +67,12 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: ${{ secrets.G_TAG }}
 
   cover:
     hidden: true
     hiddenInList: true
     hiddenInSingle: true
-
-  #editPost:
-  #  URL: "https://github.com/mattpopa"
-  #  Text: "Suggest Changes"
-  #  appendFilePath: true
 
   fuseOpts:
     isCaseSensitive: false

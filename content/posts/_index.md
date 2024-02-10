@@ -3,4 +3,4 @@ title: "Posts"
 layout: "page"
 ---
 
-Weekly posts on DevOps space
+Weekly(-ish!) posts on DevOps space

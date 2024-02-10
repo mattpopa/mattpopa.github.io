@@ -3,6 +3,8 @@ title: "About"
 layout: "page"
 ---
 
+![CloudCat Digital](/images/logo_text.png#center )
+
 We are a boutique DevOps and digital transformation agency based in Bucharest, 
 with over 10 years of experience in fields such as:
  - Content and Commerce/e-commerce platforms
