@@ -6,7 +6,7 @@ author: "Matt Popa"
 
 ![Hank Hill from King of the hill](/images/hank_hill_propane.jpg)
 
-Remember Hank Hill from "King of the Hill"? He was all about propane and its accessories. 
+Remember Hank Hill from "King of the Hill"? He was all about propane and propane accessories. 
 That's kind of like me but with DevOps instead. And like Hank's, my passion with computers started 
 in my childhood, in the '90s, a time when they were not just scarce but symbolized a window to a 
 whole new world for me. The first time I encountered a Commodore-like PC sparked a whole new level 

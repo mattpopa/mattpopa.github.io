@@ -105,7 +105,6 @@ on our Docker traffic, since CI/CD pipelines are always pulling and pushing imag
 After setting up a Docker registry and its buddy, a registry service in Kubernetes, my custom DinD 
 runner image got a little facelift to point at our shiny new mirror:
 
-    ```
     FROM docker:dind
     # Starting with the ARC image, we're adding our own special sauce
     
@@ -118,7 +117,7 @@ runner image got a little facelift to point at our shiny new mirror:
     
     # Telling Docker to use the pull-through registry cache
     RUN echo "{\"registry-mirrors\": [\"http://${REGISTRY_CACHE_IP}:${REGISTRY_CACHE_PORT}\"]}" > /etc/docker/daemon.json
-    ```
+
 ## Wrapping Up
 
 With a few tweaks here and there, we've managed to keep the ship sailing smoothly. Our CI/CD pipelines 
