@@ -1,6 +1,6 @@
 ---
-title: "Embracing OCI for Helm Charts"
-date: 2024-04-24
+title: "Embracing Open Container Initiative for Helm Charts"
+date: 2024-04-29
 author: "Matt Popa"
 ---
 
