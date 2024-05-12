@@ -58,7 +58,7 @@ rules:
   resources: ["secrets"]
   verbs: ["get", "list", "delete", "create"]
 - apiGroups: ["secrets-store.csi.x-k8s.io"]
-  resources: ["secretproviderclasses"]
+  resources: ["secretstorageclass"]
   verbs: ["get", "list", "delete", "create"]
 
 ---
