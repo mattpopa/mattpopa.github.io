@@ -28,7 +28,7 @@ even though it's not the most secure.
 One major hurdle in this migration is ensuring that updates to secrets in Vault propagate promptly 
 to Kubernetes, maintaining the seamless functionality of applications. The typical challenge here is 
 that when a secret is updated in Vault, the corresponding secret in Kubernetes doesn't automatically 
-update, and deleting the Kubernetes secret doesn’t trigger its recreation by `secretStorageClass` &
+update, and deleting the Kubernetes secret doesn’t trigger its recreation by `SecretProviderClass` &
 Vault's CSI driver.
 
 ## Tactical Fix: Using Helm Hooks
@@ -58,7 +58,7 @@ rules:
   resources: ["secrets"]
   verbs: ["get", "list", "delete", "create"]
 - apiGroups: ["secrets-store.csi.x-k8s.io"]
-  resources: ["secretstorageclass"]
+  resources: ["secretproviderclasses"]
   verbs: ["get", "list", "delete", "create"]
 
 ---
@@ -76,7 +76,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-### Pre-Upgrade/Install Hook: Deleting the Secret and SecretStorageClass
+### Pre-Upgrade/Install Hook: Deleting the Secret and SecretProviderClass
 
 We're using pre-upgrade and pre-install hooks because typically we're using `helm upgrade --install`
 in our CIs to deploy applications, and we want to cover both cases.
@@ -101,23 +101,23 @@ spec:
       containers:
       - name: kubectl
         image: bitnami/kubectl
-        command: ["/bin/sh", "-c", "kubectl delete secretstorageclass example-name --ignore-not-found; kubectl delete secret example-secret-name --ignore-not-found"]
+        command: ["/bin/sh", "-c", "kubectl delete SecretProviderClass example-name --ignore-not-found; kubectl delete secret example-secret-name --ignore-not-found"]
 ```
 
 ## Strategic Solutions and Best Practices
 
 While the immediate solution involves using Helm hooks, the recommended long-term approach is to 
-integrate secrets directly into pods using the `secretStorageClass`. This method enhances security 
+integrate secrets directly into pods using the `SecretProviderClass`. This method enhances security 
 by avoiding intermediate storage of sensitive data in Kubernetes `Secret` objects. For a deeper dive 
 into setting this up, refer to HashiCorp's [guide on injecting secrets into Kubernetes pods](https://developer.hashicorp.com/vault/tutorials/vault-agent/agent-env-vars).
 
-### Understanding SecretStorageClass Behavior
+### Understanding SecretProviderClass Behavior
 
-* Secret Creation: The SecretStorageClass in conjunction with a CSI driver like the HashiCorp Vault 
+* Secret Creation: The SecretProviderClass in conjunction with a CSI driver like the HashiCorp Vault 
 CSI driver should dynamically inject secrets into the pods based on the configuration specified. 
 However, this typically involves mounting secrets as volumes rather than creating standalone 
 Kubernetes Secret objects.
-* Secret Regeneration: When using a SecretStorageClass that relies on a CSI driver, the actual 
+* Secret Regeneration: When using a SecretProviderClass that relies on a CSI driver, the actual 
 Kubernetes Secret object isn't automatically recreated when deleted unless there's specific logic to
 do so. The CSI driver mainly manages the lifecycle of secrets inside pod volumes directly.
 
