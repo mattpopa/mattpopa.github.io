@@ -53,7 +53,8 @@ DNS hosting:
 
 1. **Purchase the Domain**:
     - I bought `cloudcat.digital` from Namecheap. You can use any domain registrar. Some popular
-options include GoDaddy, Namecheap, dedicated country code registrars (for example, `.co.uk` or `.ro`).
+options include GoDaddy, Namecheap, dedicated country code registrars (for example, domains ending in 
+`.co.uk` or `.ro`).
 
 2. **Choose a DNS Hosting Provider**:
     - Buying a domain name doesn't include DNS zone hosting. It's like buying a car -- doesn't come
