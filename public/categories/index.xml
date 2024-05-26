@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on CloudCat</title>
-    <link>https://cloudcat.digital/categories/</link>
-    <description>Recent content in Categories on CloudCat</description>
+    <title>Categories on CloudCat Digital</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on CloudCat Digital</description>
     <image>
-      <title>CloudCat</title>
-      <url>https://cloudcat.digital/images/matt.jpg</url>
-      <link>https://cloudcat.digital/images/matt.jpg</link>
+      <title>CloudCat Digital</title>
+      <url>http://localhost:1313/images/logo_small.jpg</url>
+      <link>http://localhost:1313/images/logo_small.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://cloudcat.digital/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
