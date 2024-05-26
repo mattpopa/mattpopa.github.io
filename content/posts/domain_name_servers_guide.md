@@ -24,6 +24,18 @@ network. Think of DNS as the internet's yellow pages book (remember phone books?
 URL into your browser, DNS servers take that domain name and translate it to the IP address of the 
 web server hosting that site.
 
+Understanding how DNS queries work can be a bit like figuring out who the manager of a department is 
+in a large corporation, especially if you start with no contact information. Imagine walking into a 
+company's lobby. You ask the doorman if he knows the manager of the marketing department. He directs 
+you to the receptionist, who then points you to the marketing department's floor. There, you might ask 
+a few people before you finally find the manager. Similarly, a DNS query starts broadly and becomes 
+more specific. When you type a web address into your browser, the DNS system doesn’t directly know 
+where www.example.com is. Instead, it starts by asking the root DNS servers (the doorman), which direct 
+the query to the top-level domain servers for .com (the receptionist). These servers then point to 
+the specific domain’s DNS servers (like asking around on the right floor), which finally provide the 
+specific IP address you need. This process ensures that your request finds exactly where it needs to 
+go in the vast network of the internet.
+
 **DNS hosting** is a service that helps manage this process. It stores and manages the instructions 
 that guide how your website’s name is translated into numbers (IP addresses) and how people find your 
 website. These instructions are known as DNS records. They direct web traffic, route email and more. 
