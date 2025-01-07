@@ -61,6 +61,4 @@ Here’s a breakdown of the pros and cons of using `serviceaccount_name` over `s
 
 Switching to `serviceaccount_name` is a practical choice for many use cases, particularly in cost-conscious or highly dynamic Kubernetes environments. However, ensure that your team understands its implications to balance simplicity, cost-efficiency, and security requirements.
 
-By adopting this approach thoughtfully, you can optimize Vault's usage while maintaining a robust and scalable authentication system.
-
 --- 
