@@ -4,7 +4,7 @@ date: 2024-03-14
 author: "Matt Popa"
 ---
 
-![fast_cat](/images/cheetah.png)
+![fast_cat](/images/cheetah.webp)
 
 ##  A Practical Guide for GitHub Self-Hosted Runners
 

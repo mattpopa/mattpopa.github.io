@@ -23,7 +23,7 @@ params:
     enabled: true
     title: "CloudCat Digital"
     subtitle: "All Things DevOps"
-    imageUrl:  "/images/logo.png"
+    imageUrl:  "/images/logo_cloudcat_digital.webp"
     imageTitle: "CloudCat Digital"
     imageWidth: 300
     imageHeight: 300
@@ -37,9 +37,46 @@ params:
   env: production
   title: CloudCat Digital
   description: "All Things DevOps"
-  keywords: [Blog, Portfolio, DevOps, Cloud, GitOps, Kubernetes, Docker, Terraform, AWS, GCP, Azure, Automation, IaC, SRE, Observability, Monitoring, Logging, Tracing, Security, Compliance, Governance, Cost Management, Serverless, Microservices, Containers, Orchestration, Networking, Storage, Databases, Identity and Access Management, IAM, Secrets Management, Encryption, Key Management, Service Mesh, API Gateway, Load Balancing, Autoscaling, High Availability, Disaster Recovery, Backup, Restore, Data Protection, Data Privacy, Data Governance, Data Management, Data Analytics, Data Science, Machine Learning, Artificial Intelligence, AI, ML, IoT, Edge Computing]
+  keywords:
+    - "Portfolio"
+    - "DevOps"
+    - "Cloud"
+    - "GitOps"
+    - "Kubernetes"
+    - "Docker"
+    - "Terraform"
+    - "AWS"
+    - "GCP"
+    - "Azure"
+    - "Infrastructure-as-code"
+    - "IaC"
+    - "SRE"
+    - "Observability"
+    - "Monitoring"
+    - "Logging"
+    - "Tracing"
+    - "Security"
+    - "Compliance"
+    - "Cost Management"
+    - "Serverless"
+    - "Microservices"
+    - "Containers"
+    - "Networking"
+    - "Storage"
+    - "Identity and Access Management"
+    - "Vault"
+    - "Secrets Management"
+    - "Encryption"
+    - "Service Mesh"
+    - "API Gateway"
+    - "Load Balancing"
+    - "Autoscaling"
+    - "High Availability"
+    - "Disaster Recovery"
+    - "AI"
+    - "Edge Computing"
   author: Matt Popa
-  images: ["/images/logo_small.jpg"]
+  images: ["/images/logo_text_small_cloudcat_digital.webp"]
   DateFormat: "2 January, 2006"
   defaultTheme: auto
   disableThemeToggle: false
@@ -62,8 +99,9 @@ params:
 
   label:
     text: "Home"
-    icon:  /images/matt_transparency.png
+    icon:  /images/matt_cloudcat_digital.webp
     iconHeight: 35
+    iconWidth: 35
 
   analytics:
     google:
