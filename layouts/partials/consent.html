@@ -41,6 +41,7 @@
       font-weight: bold;
       font-size: 13px;
       transition: background-color 0.3s, box-shadow 0.2s;
+      white-space: nowrap; /* Prevents text wrapping */
   }
 
   #consent-notice button.view-preferences {
@@ -56,6 +57,26 @@
   #consent-notice button:hover {
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       opacity: 0.9;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 767px) {
+      #consent-notice {
+          flex-wrap: wrap; /* Allows wrapping of content if necessary */
+          padding: 0.5rem;
+      }
+
+      #consent-notice span {
+          margin-bottom: 0.5rem;
+          margin-right: 0;
+          text-align: center;
+          width: 100%;
+      }
+
+      #consent-notice button {
+          flex: 1; /* Makes buttons fill available space evenly */
+          margin: 0.25rem;
+      }
   }
 
   /* Consent Overlay Styles */
@@ -107,6 +128,7 @@
       cursor: pointer;
       border: none;
       margin-right: 5px;
+      white-space: nowrap; /* Prevents text wrapping */
   }
 
   #consent-overlay button.close-overlay {
