@@ -1,0 +1,195 @@
+<style>
+  /* Consent Banner Styles */
+  #consent-notice {
+      padding: 0.75rem 1rem;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      max-width: 90%;
+      background: #2a2a2a;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      z-index: 9999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+  }
+
+  #consent-notice span {
+      margin-right: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 13px;
+      text-align: center;
+  }
+
+  #consent-notice span a {
+      color: #ff6f61;
+      text-decoration: underline;
+      font-weight: bold;
+  }
+
+  #consent-notice button {
+      cursor: pointer;
+      padding: 8px 12px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 13px;
+      transition: background-color 0.3s, box-shadow 0.2s;
+  }
+
+  #consent-notice button.view-preferences {
+      background: #4caf50;
+      color: white;
+  }
+
+  #consent-notice button.close-banner {
+      background: #555;
+      color: white;
+  }
+
+  #consent-notice button:hover {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      opacity: 0.9;
+  }
+
+  /* Consent Overlay Styles */
+  #consent-overlay {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999999;
+      overflow: auto;
+      cursor: pointer;
+  }
+
+  #consent-overlay.active {
+      display: flex;
+  }
+
+  #consent-overlay > div {
+      background: #fff;
+      color: #333;
+      width: 100%;
+      max-width: 30rem;
+      padding: 1.75rem;
+      margin: auto;
+      border-radius: 8px;
+      cursor: initial;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  #consent-overlay h3 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      color: #333;
+  }
+
+  #consent-overlay p {
+      margin: 0 0 15px 0;
+      font-size: 14px;
+      color: #555;
+  }
+
+  #consent-overlay button {
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+      margin-right: 5px;
+  }
+
+  #consent-overlay button.close-overlay {
+      background: #4caf50;
+      color: white;
+  }
+
+  #consent-overlay button:hover {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      opacity: 0.9;
+  }
+</style>
+
+<div id="consent-notice">
+  <span>We are using Google Analytics to improve the functionality of this website.</span>
+  <button class="btn view-preferences">View Preferences</button>
+  <button class="btn close-banner">Close</button>
+</div>
+
+<div id="consent-overlay">
+  <div>
+    <div>
+      <input type="checkbox" id="item0" value="1" name="item0" checked disabled />
+      <label for="item0">
+        <h3>Google Analytics (Functional)</h3>
+        <p>This code gives us insight into the number of people that visit our website, where they are from, and what they are clicking on. No personal data is stored.</p>
+      </label>
+    </div>
+    <div>
+      <button class="btn close-overlay">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const overlay = document.getElementById("consent-overlay");
+      const notice = document.getElementById("consent-notice");
+
+      // Function to create a cookie
+      function createCookie(name, value, days) {
+          let expires = "";
+          if (days) {
+              const date = new Date();
+              date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+              expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + value + expires + "; path=/; SameSite=None; Secure";
+      }
+
+      // Function to read a cookie
+      function readCookie(name) {
+          const nameEQ = name + "=";
+          const ca = document.cookie.split(';');
+          for (let i = 0; i < ca.length; i++) {
+              let c = ca[i];
+              while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+      }
+
+      // Check if the user has already interacted with the consent banner
+      if (readCookie("consent-seen")) {
+          notice.style.display = "none"; // Hide banner if cookie is set
+      } else {
+          notice.style.display = "flex"; // Show banner if cookie is not set
+      }
+
+      // Show overlay when "View Preferences" is clicked
+      document.querySelector(".view-preferences").addEventListener("click", function () {
+          overlay.classList.add("active");
+      });
+
+      // Close overlay
+      document.querySelector(".close-overlay").addEventListener("click", function () {
+          overlay.classList.remove("active");
+      });
+
+      // Close banner and set cookie
+      document.querySelector(".close-banner").addEventListener("click", function () {
+          createCookie("consent-seen", "true", 365); // Cookie valid for 1 year
+          notice.style.display = "none";
+      });
+  });
+</script>
