@@ -1,6 +1,7 @@
 baseURL: "https://cloudcat.digital/"
 title: "CloudCat Digital"
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
