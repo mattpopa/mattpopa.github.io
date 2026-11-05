@@ -1,7 +1,7 @@
 ---
 title: "Embracing Open Container Initiative for Helm Charts"
 date: 2024-04-28
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![containers](/images/containers.jpg)

@@ -1,8 +1,9 @@
 baseURL: "https://cloudcat.digital/"
 title: "CloudCat Digital"
-pagination:
-  pagerSize: 5
 theme: PaperMod
+
+pagination:
+  pagerSize: 8
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -14,20 +15,48 @@ minify:
   minifyOutput: true
 
 params:
+  env: production
+  title: CloudCat Digital
+  description: "DevOps and platform engineering for product teams: AWS, Kubernetes, CI/CD, cloud cost, security and compliance. Based in Bucharest, working remotely with teams across the UK and EU."
+  keywords:
+    - "DevOps consultancy"
+    - "Platform engineering"
+    - "Kubernetes"
+    - "EKS"
+    - "AWS"
+    - "Azure"
+    - "Terraform"
+    - "GitHub Actions"
+    - "CI/CD"
+    - "SRE"
+    - "Cloud cost"
+    - "ISO 27001"
+    - "Observability"
+    - "HashiCorp Vault"
+    - "Bucharest"
+  author: Matei Popa
+  images: ["/images/logo_text_small_cloudcat_digital.webp"]
+  DateFormat: "2 January 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+  mainSections:
+    - posts
+
   assets:
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
     favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  label:
+    text: "CloudCat Digital"
+    icon: /images/logo_mark_small.webp
+    iconHeight: 32
+    iconWidth: 32
+
   profileMode:
-    enabled: true
-    title: "CloudCat Digital"
-    subtitle: "All Things DevOps"
-    imageUrl:  "/images/logo_cloudcat_digital.webp"
-    imageTitle: "CloudCat Digital"
-    imageWidth: 300
-    imageHeight: 300
+    enabled: false
 
   socialIcons:
     - name: "github"
@@ -35,78 +64,21 @@ params:
     - name: "linkedin"
       url: "https://www.linkedin.com/in/matei-popa-devops/"
 
-  env: production
-  title: CloudCat Digital
-  description: "All Things DevOps"
-  keywords:
-    - "Portfolio"
-    - "DevOps"
-    - "Cloud"
-    - "GitOps"
-    - "Kubernetes"
-    - "Docker"
-    - "Terraform"
-    - "AWS"
-    - "GCP"
-    - "Azure"
-    - "Infrastructure-as-code"
-    - "IaC"
-    - "SRE"
-    - "Observability"
-    - "Monitoring"
-    - "Logging"
-    - "Tracing"
-    - "Security"
-    - "Compliance"
-    - "Cost Management"
-    - "Serverless"
-    - "Microservices"
-    - "Containers"
-    - "Networking"
-    - "Storage"
-    - "Identity and Access Management"
-    - "Vault"
-    - "Secrets Management"
-    - "Encryption"
-    - "Service Mesh"
-    - "API Gateway"
-    - "Load Balancing"
-    - "Autoscaling"
-    - "High Availability"
-    - "Disaster Recovery"
-    - "AI"
-    - "Edge Computing"
-  author: Matt Popa
-  images: ["/images/logo_text_small_cloudcat_digital.webp"]
-  DateFormat: "2 January, 2006"
-  defaultTheme: auto
-  disableThemeToggle: false
-
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
-  disableSpecial1stPost: false
+  showtoc: true
+  tocopen: false
+  disableSpecial1stPost: true
   disableScrollToTop: false
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
-  tocopen: false
-
-  label:
-    text: "Home"
-    icon:  /images/matt_cloudcat_digital.webp
-    iconHeight: 35
-    iconWidth: 35
-
-  analytics:
-    google:
-      SiteVerificationTag: "G-PQC8K5TJNR"
 
   cover:
     hidden: true
@@ -125,18 +97,22 @@ params:
 
 menu:
   main:
+    - identifier: services
+      name: Services
+      url: /#services
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
     - identifier: contact
       name: Contact
-      url: /contact
-      weight: 30
-    - identifier: About
-      name: About
-      url: /about
-      weight: 20
-    - identifier: Posts
-      name: Posts
-      url: /posts
-      weight: 10
+      url: /contact/
+      weight: 40
 
 pygmentsUseClasses: true
 markup:

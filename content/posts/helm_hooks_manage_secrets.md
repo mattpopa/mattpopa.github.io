@@ -1,7 +1,7 @@
 ---
 title: "Integrating Helm Hooks with HashiCorp Vault for Cloud Migrations"
 date: 2024-05-12
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![helm_hooks](/images/helm_hooks.jpg)

@@ -1,0 +1,99 @@
+{{- define "main" }}
+{{- $h := site.Data.home }}
+<div class="cc-home">
+
+  <section class="cc-hero">
+    <div class="cc-hero-text">
+      <p class="cc-eyebrow">{{ $h.hero.eyebrow }}</p>
+      <h1>{{ $h.hero.title }}</h1>
+      <p class="cc-lead">{{ $h.hero.lead }}</p>
+      <div class="cc-actions">
+        <a class="cc-btn cc-btn-primary" href="{{ $h.hero.primary.url | relURL }}">{{ $h.hero.primary.text }}</a>
+        <a class="cc-btn cc-btn-ghost" href="{{ $h.hero.secondary.url }}">{{ $h.hero.secondary.text }}</a>
+      </div>
+    </div>
+    <div class="cc-hero-art">
+      <img src="{{ "images/logo_mark.webp" | relURL }}" alt="CloudCat Digital logo" width="512" height="512" fetchpriority="high">
+    </div>
+  </section>
+
+  <section class="cc-stack" aria-label="Technologies we work with">
+    <span class="cc-stack-label">{{ $h.stack_label }}</span>
+    <ul>
+      {{- range $h.stack }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+  </section>
+
+  <section class="cc-facts" aria-label="Experience at a glance">
+    {{- range $h.facts }}
+    <div class="cc-fact">
+      <strong>{{ .value }}</strong>
+      <span>{{ .label }}</span>
+    </div>
+    {{- end }}
+  </section>
+
+  <section class="cc-section" id="services">
+    <div class="cc-section-head">
+      <h2>{{ $h.services_title }}</h2>
+      <p>{{ $h.services_lead }}</p>
+    </div>
+    <div class="cc-grid cc-grid-3">
+      {{- range $h.services }}
+      <article class="cc-card">
+        <span class="cc-icon">{{ partial "cc_icon.html" .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="cc-section cc-section-alt" id="how-we-work">
+    <div class="cc-section-head">
+      <h2>{{ $h.work_title }}</h2>
+      <p>{{ $h.work_lead }}</p>
+    </div>
+    <div class="cc-grid cc-grid-3">
+      {{- range $h.engagements }}
+      <article class="cc-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </article>
+      {{- end }}
+    </div>
+    <ul class="cc-principles">
+      {{- range $h.principles }}
+      <li><strong>{{ .title }}</strong>{{ .text }}</li>
+      {{- end }}
+    </ul>
+  </section>
+
+  <section class="cc-section" id="writing">
+    <div class="cc-section-head cc-section-head-row">
+      <h2>{{ $h.writing_title }}</h2>
+      <a class="cc-more" href="{{ "posts/" | relURL }}">{{ $h.writing_more }} &rarr;</a>
+    </div>
+    <div class="cc-grid cc-grid-3">
+      {{- $posts := where (where site.RegularPages "Section" "posts") "Params.hiddenInHomeList" "!=" true }}
+      {{- range first 3 $posts }}
+      <article class="cc-card cc-post">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format site.Params.DateFormat }}</time>
+        <h3>{{ .Title }}</h3>
+        <p>{{ (.Description | default (.Summary | plainify)) | truncate 160 }}</p>
+        <a class="cc-card-link" href="{{ .RelPermalink }}" aria-label="Read: {{ .Title }}"></a>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="cc-cta">
+    <h2>{{ $h.cta.title }}</h2>
+    <p>{{ $h.cta.text }}</p>
+    <a class="cc-btn cc-btn-primary" href="{{ "contact/" | relURL }}">{{ $h.cta.button }}</a>
+  </section>
+
+</div>
+{{- end }}

@@ -1,7 +1,7 @@
 ---
 title: "Making Caching Work for You in CI"
 date: 2024-03-14
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![fast_cat](/images/cheetah.webp)

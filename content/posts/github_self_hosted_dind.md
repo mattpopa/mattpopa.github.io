@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions, self-hosted runners with Scale-Sets tips and tricks"
 date: 2024-02-29
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![gh actions on k8s](/images/steamboat_willie.jpg)

@@ -1,7 +1,7 @@
 ---
 title: "A Beginner's Guide to DNS"
 date: 2024-05-26
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![DNS](/images/dns2.jpg)

@@ -1,7 +1,7 @@
 ---
 title: "Microservices VS Serverless"
 date: 2024-04-14
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![microservices_vs_serverless](/images/microservices_vs_serverless.jpg)

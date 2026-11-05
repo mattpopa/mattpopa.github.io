@@ -2,7 +2,7 @@
 title: "AI Platform Engineering: what changes when agents become your platform's users"
 date: 2026-09-07
 description: "Notes from running an LLM agent as a production workload on Kubernetes and letting coding agents operate the platform: what stayed the same, what changed, and the lessons learned along the way."
-author: "Matt Popa"
+author: "Matei Popa"
 tags:
   - AI
   - Platform Engineering

@@ -1,0 +1,22 @@
+{{- define "main" }}
+<article class="cc-wide cc-about">
+  <header class="cc-about-head">
+    <img class="cc-portrait" src="{{ "images/matei_popa.webp" | relURL }}" alt="Matei Popa" width="400" height="400">
+    <div>
+      <p class="cc-eyebrow">About</p>
+      <h1>{{ .Title }}</h1>
+      {{- with .Description }}
+      <p class="cc-lead">{{ . }}</p>
+      {{- end }}
+      <div class="cc-actions">
+        <a class="cc-btn cc-btn-ghost" href="https://www.linkedin.com/in/matei-popa-devops/" rel="me noopener" target="_blank">LinkedIn</a>
+        <a class="cc-btn cc-btn-ghost" href="https://github.com/mattpopa" rel="me noopener" target="_blank">GitHub</a>
+        <a class="cc-btn cc-btn-primary" href="{{ "contact/" | relURL }}">Get in touch</a>
+      </div>
+    </div>
+  </header>
+  <div class="post-content md-content cc-about-body">
+    {{ .Content }}
+  </div>
+</article>
+{{- end }}
