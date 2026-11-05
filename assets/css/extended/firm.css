@@ -481,6 +481,10 @@ body:has(.cc-home) {
     margin-top: 40px;
 }
 
+.cc-about-body ul {
+    margin-bottom: 32px;
+}
+
 /* Contact */
 .cc-contact .page-header {
     margin-bottom: 32px;

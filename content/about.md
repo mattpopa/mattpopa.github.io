@@ -6,7 +6,7 @@ description: "More than fifteen years across infrastructure, SRE, DevOps and eng
 
 More than fifteen years in infrastructure, SRE and DevOps, more than ten of them on AWS, from Linux hosting to managing the platform, tooling and release engineering teams at a large consultancy while staying hands-on. Since 2022 I run CloudCat Digital, currently owning the AWS and EKS platform behind an AI product end to end: architecture, CI/CD, GPU capacity for ML workloads, security, observability and incident response.
 
-Certified CKA, CKAD and CKS, HashiCorp Terraform and Vault Associate.
+Certified CKA, CKAD and CKS, HashiCorp Terraform and Vault Associate, and Akamai Web Performance Foundations for CDN and edge work.
 
 ## How I work
 
