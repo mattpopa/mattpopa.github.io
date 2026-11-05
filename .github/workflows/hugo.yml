@@ -58,6 +58,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-        with:
-          # GitHub's Pages publish step has been slow (Nov 2026); default is 10 min
-          timeout: 3600000
