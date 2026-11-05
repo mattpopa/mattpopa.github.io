@@ -2,6 +2,7 @@
 title: "System Administrator Appreciation Day"
 date: 2025-07-25
 author: "Matt Popa"
+hiddenInHomeList: true
 ---
 
 ![System Administrator Appreciation Day](/images/System_Administrator_Appreciation_Day.jpg)

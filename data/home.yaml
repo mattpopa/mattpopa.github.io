@@ -1,0 +1,85 @@
+# Homepage copy. Edit here, not in layouts/index.html.
+hero:
+  eyebrow: "DevOps & platform engineering"
+  title: "Platform engineering for product teams, without hiring a platform team."
+  lead: "We design, build and run cloud infrastructure for product companies: AWS and Kubernetes, GPU capacity for AI workloads, delivery pipelines, cost, security and compliance, observability. More than fifteen years of hands-on work, remote from Bucharest, for teams across the UK and EU."
+  primary:
+    text: "Start a conversation"
+    url: "/contact/"
+  secondary:
+    text: "What we do"
+    url: "#services"
+
+stack_label: "What we work with every day"
+stack:
+  - AWS
+  - Azure
+  - Kubernetes
+  - Terraform
+  - OpenTofu
+  - Helm
+  - GitHub Actions
+  - HashiCorp Vault
+  - NVIDIA GPUs
+  - vLLM
+  - Prometheus
+  - Grafana
+  - Aurora PostgreSQL
+
+facts:
+  - value: "15+"
+    label: "years across infrastructure, SRE, DevOps and engineering leadership"
+  - value: "CKA · CKAD · CKS"
+    label: "Kubernetes certified, plus HashiCorp Terraform and Vault, and GitHub Actions"
+  - value: "Since 2022"
+    label: "running the AWS and EKS platform behind an AI product end to end"
+  - value: "25"
+    label: "engineers led in a release engineering team at Deloitte Digital"
+
+services_title: "What we do"
+services_lead: "The work a platform team would do, delivered by someone who has run it in production, been on call for it, and led the team doing it."
+services:
+  - icon: box
+    title: "Kubernetes and EKS"
+    text: "Version upgrades without downtime, node pools and autoscaling with Karpenter or Cluster Autoscaler, Helm and GitOps, disruption budgets that hold when nodes get recycled."
+  - icon: pipeline
+    title: "CI/CD platforms"
+    text: "GitHub Actions on self-hosted runners, caches that make builds fast, deploy pipelines with gates and rollbacks, and an end to flaky end-to-end suites."
+  - icon: cost
+    title: "Cloud cost"
+    text: "Spend audits with attribution per service, savings plans and right-sizing, NAT and egress analysis, and removal of what nobody uses. Findings first, then the changes."
+  - icon: shield
+    title: "Security and compliance"
+    text: "The infrastructure side of ISO 27001 and Cyber Essentials with Vanta, WAF in front of public endpoints, secrets in Vault, image and CVE hygiene, and answers for customer security questionnaires."
+  - icon: activity
+    title: "Observability and on-call"
+    text: "Prometheus, Grafana and Loki set up properly, alerts tuned so they page only when it matters, incident playbooks, and the fixes that stop the same incident coming back."
+  - icon: cpu
+    title: "AI infrastructure"
+    text: "GPU-enabled EKS with NVIDIA tooling and scale-from-zero node pools, self-hosted vLLM inference, LLM agents as production workloads, and coding agents that operate CI and infrastructure under review."
+
+work_title: "How we work"
+work_lead: "Three ways to engage. All of them end with your team able to run what we built."
+engagements:
+  - title: "Fractional platform engineer"
+    text: "A fixed number of days a month inside your team: your Slack, your repos, your incidents. We own the platform backlog so your developers can keep shipping."
+  - title: "Fixed-scope projects"
+    text: "An EKS upgrade, a CI migration, a cost audit, an ISO 27001 push. Scoped and priced up front, delivered with the runbooks to keep it running."
+  - title: "Reviews and second opinions"
+    text: "A close look at your architecture, pipelines or cloud bill, with a written report and a prioritised list of what to change first."
+
+principles:
+  - title: "Production experience, not slide decks"
+    text: "Everything we recommend we have run ourselves, in production, with a pager."
+  - title: "Written down"
+    text: "Decisions, runbooks and findings land in your wiki and your repos, not in our heads."
+  - title: "Boring on purpose"
+    text: "Fewer moving parts, rehearsed upgrades, alerts that mean something."
+
+writing_title: "Latest writing"
+writing_more: "All posts"
+
+cta:
+  title: "Have a project in mind?"
+  text: "Tell us what is slow, expensive or fragile. We reply within one business day."
+  button: "Get in touch"

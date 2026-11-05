@@ -1,0 +1,85 @@
+{{- define "main" }}
+<div class="cc-wide cc-contact">
+  <header class="page-header">
+    <p class="cc-eyebrow">Contact</p>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <div class="cc-contact-grid">
+    <div class="cc-contact-intro post-content">
+      {{ .Content }}
+      <p class="cc-contact-alt">
+        Prefer another channel?
+        <a href="mailto:matei@cloudcat.digital">matei@cloudcat.digital</a>
+        &middot;
+        <a href="https://www.linkedin.com/in/matei-popa-devops/" rel="me noopener" target="_blank">LinkedIn</a>
+        &middot;
+        <a href="https://github.com/mattpopa" rel="me noopener" target="_blank">GitHub</a>
+      </p>
+    </div>
+
+    <div class="cc-contact-form-wrap">
+      <form id="contact-form" class="cc-form" action="https://formspree.io/f/mayvdeee" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry via cloudcat.digital">
+        <input type="text" name="_gotcha" class="cc-gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label>
+          <span class="cc-label">Name</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          <span class="cc-label">Email</span>
+          <input type="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+        </label>
+        <label>
+          <span class="cc-label">Company <small class="cc-optional">(optional)</small></span>
+          <input type="text" name="company" autocomplete="organization">
+        </label>
+        <label>
+          <span class="cc-label">What are you working on?</span>
+          <textarea name="message" rows="6" required placeholder="A few lines about your platform and what is getting in the way."></textarea>
+        </label>
+
+        <div class="cc-form-actions">
+          <button type="submit" class="cc-btn cc-btn-primary">Send message</button>
+          <span class="cc-form-note">We reply within one business day.</span>
+        </div>
+        <p id="contact-error" class="cc-form-error" hidden>Something went wrong sending that. Please try again, or reach out on LinkedIn.</p>
+      </form>
+
+      <div id="contact-thanks" class="cc-form cc-thanks" hidden>
+        <h2>Thanks, message received.</h2>
+        <p>We will get back to you within one business day.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var form = document.getElementById('contact-form');
+    if (!form || !window.fetch) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type=submit]');
+      var err = document.getElementById('contact-error');
+      err.hidden = true;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        if (!r.ok) throw new Error('status ' + r.status);
+        form.hidden = true;
+        document.getElementById('contact-thanks').hidden = false;
+      }).catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+        err.hidden = false;
+      });
+    });
+  })();
+</script>
+{{- end }}
