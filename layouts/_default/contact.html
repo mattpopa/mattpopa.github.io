@@ -38,6 +38,11 @@
           <textarea name="message" rows="6" required placeholder="A few lines about your platform and what is getting in the way."></textarea>
         </label>
 
+        <div class="cc-captcha">
+          <div id="contact-captcha" class="g-recaptcha" data-sitekey="6LfFldgSAAAAAKZsuk4ejWF3ng4Q-WMrvh5NF3Ty"></div>
+        </div>
+        <p id="contact-hint" class="cc-form-error" hidden>Please tick the captcha first.</p>
+
         <div class="cc-form-actions">
           <button type="submit" class="cc-btn cc-btn-primary">Send message</button>
           <span class="cc-form-note">We reply within one business day.</span>
@@ -54,10 +59,21 @@
 
 <script>
   (function () {
+    // Match the captcha widget to the site theme before Google's script renders it.
+    var captcha = document.getElementById('contact-captcha');
+    if (captcha) {
+      captcha.setAttribute('data-theme', document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+    }
     var form = document.getElementById('contact-form');
     if (!form || !window.fetch) return;
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      var hint = document.getElementById('contact-hint');
+      if (window.grecaptcha && typeof grecaptcha.getResponse === 'function' && !grecaptcha.getResponse()) {
+        hint.hidden = false;
+        return;
+      }
+      hint.hidden = true;
       var btn = form.querySelector('button[type=submit]');
       btn.disabled = true;
       btn.textContent = 'Sending…';
@@ -79,4 +95,5 @@
     });
   })();
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {{- end }}

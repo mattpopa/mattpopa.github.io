@@ -569,6 +569,10 @@ body:has(.cc-home) {
     opacity: 0;
 }
 
+.cc-captcha {
+    min-height: 78px;
+}
+
 .cc-form-actions {
     display: flex;
     flex-wrap: wrap;
