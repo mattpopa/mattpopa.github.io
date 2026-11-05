@@ -490,7 +490,8 @@ body:has(.cc-home) {
     font-size: clamp(28px, 7vw, 40px);
 }
 
-.cc-contact-intro {
+.cc-contact-intro,
+.cc-contact-form-wrap {
     min-width: 0;
 }
 
@@ -511,9 +512,10 @@ body:has(.cc-home) {
 }
 
 .cc-form {
-    display: grid;
+    display: block;
+    width: 100%;
     min-width: 0;
-    gap: 16px;
+    box-sizing: border-box;
     padding: 28px;
     background: var(--entry);
     border: 1px solid var(--border);
@@ -521,12 +523,28 @@ body:has(.cc-home) {
     box-shadow: var(--cc-shadow);
 }
 
+.cc-form > label,
+.cc-form > .cc-captcha,
+.cc-form > .cc-form-actions,
+.cc-form > .cc-form-error,
+.cc-thanks > p {
+    margin-top: 16px;
+}
+
+.cc-form > label:first-of-type {
+    margin-top: 0;
+}
+
 .cc-form label {
-    display: grid;
-    gap: 6px;
+    display: block;
     font-size: 14px;
     font-weight: 600;
     color: var(--primary);
+}
+
+.cc-label {
+    display: block;
+    margin-bottom: 6px;
 }
 
 .cc-optional {
@@ -541,8 +559,11 @@ body:has(.cc-home) {
 
 .cc-form input,
 .cc-form textarea {
+    display: block;
     box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 11px 14px;
     border: 1.5px solid var(--border);
     border-radius: 10px;
@@ -584,8 +605,7 @@ body:has(.cc-home) {
 }
 
 .cc-captcha-frame {
-    width: 302px;
-    max-width: 100%;
+    width: min(302px, 100%);
     height: 76px;
     overflow: hidden;
     border-radius: 10px;
