@@ -11,7 +11,7 @@ tags:
   - AI
   - DevOps
 ---
-![Rebuilding this site with Claude Code](/images/claude_code_site_redesign.webp)
+![CloudCat repainting the wall](/images/cloudcat_painter.webp)
 
 This site has run on Hugo with the PaperMod theme for a couple of years, free on GitHub Pages. It
 worked, and it looked like what it was: a personal blog with a logo in a circle and "All Things DevOps"
