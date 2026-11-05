@@ -42,7 +42,6 @@
           <button type="submit" class="cc-btn cc-btn-primary">Send message</button>
           <span class="cc-form-note">We reply within one business day.</span>
         </div>
-        <p id="contact-error" class="cc-form-error" hidden>Something went wrong sending that. Please try again, or reach out on LinkedIn.</p>
       </form>
 
       <div id="contact-thanks" class="cc-form cc-thanks" hidden>
@@ -60,8 +59,6 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = form.querySelector('button[type=submit]');
-      var err = document.getElementById('contact-error');
-      err.hidden = true;
       btn.disabled = true;
       btn.textContent = 'Sending…';
       fetch(form.action, {
@@ -73,9 +70,11 @@
         form.hidden = true;
         document.getElementById('contact-thanks').hidden = false;
       }).catch(function () {
+        // Inline submit refused (e.g. captcha required on the Formspree side):
+        // fall back to a normal form post, which Formspree handles on its own page.
         btn.disabled = false;
         btn.textContent = 'Send message';
-        err.hidden = false;
+        form.submit();
       });
     });
   })();
