@@ -39,7 +39,7 @@
         </label>
 
         <div class="cc-captcha">
-          <div id="contact-captcha" class="g-recaptcha" data-sitekey="6LfFldgSAAAAAKZsuk4ejWF3ng4Q-WMrvh5NF3Ty"></div>
+          <div id="contact-captcha-holder" class="cc-captcha-frame"></div>
         </div>
         <p id="contact-hint" class="cc-form-error" hidden>Please tick the captcha first.</p>
 
@@ -59,17 +59,31 @@
 
 <script>
   (function () {
-    // Match the captcha widget to the site theme before Google's script renders it.
-    var captcha = document.getElementById('contact-captcha');
-    if (captcha) {
-      captcha.setAttribute('data-theme', document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+    // reCAPTCHA is rendered explicitly so it can follow the site theme,
+    // and re-rendered when the visitor toggles light/dark.
+    var SITE_KEY = '6LfFldgSAAAAAKZsuk4ejWF3ng4Q-WMrvh5NF3Ty';
+    var widgetId = null;
+    function theme() {
+      return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
     }
+    function renderCaptcha() {
+      var holder = document.getElementById('contact-captcha-holder');
+      if (!holder || !window.grecaptcha || typeof grecaptcha.render !== 'function') return;
+      holder.innerHTML = '<div id="contact-captcha"></div>';
+      widgetId = grecaptcha.render('contact-captcha', { sitekey: SITE_KEY, theme: theme() });
+    }
+    window.ccCaptchaInit = renderCaptcha;
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () { setTimeout(renderCaptcha, 0); });
+    }
+
     var form = document.getElementById('contact-form');
     if (!form || !window.fetch) return;
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var hint = document.getElementById('contact-hint');
-      if (window.grecaptcha && typeof grecaptcha.getResponse === 'function' && !grecaptcha.getResponse()) {
+      if (widgetId !== null && !grecaptcha.getResponse(widgetId)) {
         hint.hidden = false;
         return;
       }
@@ -95,5 +109,5 @@
     });
   })();
 </script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=ccCaptchaInit&render=explicit" async defer></script>
 {{- end }}

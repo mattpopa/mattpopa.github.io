@@ -573,6 +573,20 @@ body:has(.cc-home) {
     min-height: 78px;
 }
 
+.cc-captcha-frame {
+    width: 302px;
+    max-width: 100%;
+    height: 76px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-sizing: content-box;
+}
+
+.cc-captcha-frame iframe {
+    display: block;
+}
+
 .cc-form-actions {
     display: flex;
     flex-wrap: wrap;

@@ -37,7 +37,7 @@ params:
   author: Matei Popa
   images: ["/images/logo_text_small_cloudcat_digital.webp"]
   DateFormat: "2 January 2006"
-  defaultTheme: auto
+  defaultTheme: light
   disableThemeToggle: false
   mainSections:
     - posts
