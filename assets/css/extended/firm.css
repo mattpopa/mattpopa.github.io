@@ -486,6 +486,14 @@ body:has(.cc-home) {
     margin-bottom: 32px;
 }
 
+.cc-contact .page-header h1 {
+    font-size: clamp(28px, 7vw, 40px);
+}
+
+.cc-contact-intro {
+    min-width: 0;
+}
+
 .cc-contact-grid {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -504,6 +512,7 @@ body:has(.cc-home) {
 
 .cc-form {
     display: grid;
+    min-width: 0;
     gap: 16px;
     padding: 28px;
     background: var(--entry);
@@ -532,6 +541,7 @@ body:has(.cc-home) {
 
 .cc-form input,
 .cc-form textarea {
+    box-sizing: border-box;
     width: 100%;
     padding: 11px 14px;
     border: 1.5px solid var(--border);
@@ -627,12 +637,7 @@ body:has(.cc-home) {
     }
 
     .cc-hero-art {
-        order: -1;
-        justify-content: flex-start;
-    }
-
-    .cc-hero-art img {
-        width: 120px;
+        display: none;
     }
 
     .cc-grid-3,
@@ -643,7 +648,7 @@ body:has(.cc-home) {
 
     .cc-contact-grid,
     .cc-about-head {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .cc-section-alt,
