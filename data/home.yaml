@@ -35,8 +35,8 @@ facts:
     label: "Kubernetes certified, plus HashiCorp Terraform and Vault, and GitHub Actions"
   - value: "10+ years on AWS"
     label: "from managed hosting and EC2 to GPU-enabled EKS platforms for AI products"
-  - value: "25"
-    label: "engineers led in a release engineering team at a large consultancy"
+  - value: "Platform · Tooling · Release"
+    label: "engineering teams led as a manager at a large consultancy, while staying hands-on"
 
 services_title: "What we do"
 services_lead: "The work a platform team would do, delivered by someone who has run it in production, been on call for it, and led the team doing it."
