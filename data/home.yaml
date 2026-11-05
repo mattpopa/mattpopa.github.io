@@ -33,8 +33,8 @@ facts:
     label: "years across infrastructure, SRE, DevOps and engineering leadership"
   - value: "CKA · CKAD · CKS"
     label: "Kubernetes certified, plus HashiCorp Terraform and Vault, and GitHub Actions"
-  - value: "Since 2022"
-    label: "running the AWS and EKS platform behind an AI product end to end"
+  - value: "10+ years on AWS"
+    label: "from managed hosting and EC2 to GPU-enabled EKS platforms for AI products"
   - value: "25"
     label: "engineers led in a release engineering team at a large consultancy"
 
