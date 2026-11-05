@@ -42,8 +42,8 @@ services_title: "What we do"
 services_lead: "The work a platform team would do, delivered by someone who has run it in production, been on call for it, and led the team doing it."
 services:
   - icon: box
-    title: "Kubernetes and EKS"
-    text: "Version upgrades without downtime, node pools and autoscaling with Karpenter or Cluster Autoscaler, Helm and GitOps, disruption budgets that hold when nodes get recycled."
+    title: "Kubernetes, managed or your own"
+    text: "EKS, AKS, OKE and other managed clusters, or self-managed ones with Rancher. Upgrades without downtime, node pools and autoscaling with Karpenter or Cluster Autoscaler, Helm and GitOps, fleet management with tools like Rafay."
   - icon: pipeline
     title: "CI/CD platforms"
     text: "GitHub Actions, Azure DevOps or GitLab, self-hosted runners where they pay off, caches that make builds fast, deploy pipelines with gates and rollbacks, and an end to flaky end-to-end suites."
