@@ -2,7 +2,7 @@
 title: "Building a wordpress-as-a-service platform on AWS with Terraform"
 date: 2025-01-08
 description: "A practical guide to hosting a PHP blog on AWS using Terraform. Automate infrastructure, manage certificates, secure and scale."
-author: "Matt Popa"
+author: "Matei Popa"
 tags:
   - PHP
   - WordPress

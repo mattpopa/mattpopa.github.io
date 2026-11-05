@@ -1,7 +1,7 @@
 ---
 title: "Hashicorp Vault Client Optimization"
 date: 2024-12-26
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![Hashicorp Vault](/images/vault.jpg)

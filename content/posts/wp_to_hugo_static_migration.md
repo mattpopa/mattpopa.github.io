@@ -2,7 +2,7 @@
 title: "Retiring WordPress: a byte-identical migration to Hugo and GitHub Pages"
 date: 2026-07-06
 description: "How we moved a WordPress site off AWS onto Hugo and GitHub Pages without visitors noticing — capture, verify byte-for-byte, cut over DNS, and stop paying for an ALB."
-author: "Matt Popa"
+author: "Matei Popa"
 tags:
   - WordPress
   - Hugo

@@ -14,7 +14,8 @@
     --cc-shadow: 0 1px 2px rgba(12, 29, 61, 0.05), 0 10px 30px rgba(12, 29, 61, 0.06);
 }
 
-.dark {
+.dark,
+:root[data-theme="dark"] {
     --cc-accent: #a9bfea;
     --cc-surface-alt: #25262b;
     --cc-btn-bg: #c9d6f2;
@@ -140,7 +141,8 @@ body:has(.cc-home) {
     filter: drop-shadow(0 24px 40px rgba(12, 29, 61, 0.18));
 }
 
-.dark .cc-hero-art img {
+.dark .cc-hero-art img,
+[data-theme="dark"] .cc-hero-art img {
     filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.5));
 }
 
@@ -301,7 +303,8 @@ body:has(.cc-home) {
     color: var(--cc-navy);
 }
 
-.dark .cc-icon {
+.dark .cc-icon,
+[data-theme="dark"] .cc-icon {
     background: rgba(146, 170, 219, 0.16);
     color: var(--cc-blue);
 }
@@ -583,7 +586,8 @@ body:has(.cc-home) {
     color: #b42318;
 }
 
-.dark .cc-form-error {
+.dark .cc-form-error,
+[data-theme="dark"] .cc-form-error {
     color: #f97066;
 }
 

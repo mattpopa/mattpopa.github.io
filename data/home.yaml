@@ -19,6 +19,8 @@ stack:
   - OpenTofu
   - Helm
   - GitHub Actions
+  - Azure DevOps
+  - GitLab
   - HashiCorp Vault
   - NVIDIA GPUs
   - vLLM
@@ -34,7 +36,7 @@ facts:
   - value: "Since 2022"
     label: "running the AWS and EKS platform behind an AI product end to end"
   - value: "25"
-    label: "engineers led in a release engineering team at Deloitte Digital"
+    label: "engineers led in a release engineering team at a large consultancy"
 
 services_title: "What we do"
 services_lead: "The work a platform team would do, delivered by someone who has run it in production, been on call for it, and led the team doing it."
@@ -44,13 +46,13 @@ services:
     text: "Version upgrades without downtime, node pools and autoscaling with Karpenter or Cluster Autoscaler, Helm and GitOps, disruption budgets that hold when nodes get recycled."
   - icon: pipeline
     title: "CI/CD platforms"
-    text: "GitHub Actions on self-hosted runners, caches that make builds fast, deploy pipelines with gates and rollbacks, and an end to flaky end-to-end suites."
+    text: "GitHub Actions, Azure DevOps or GitLab, self-hosted runners where they pay off, caches that make builds fast, deploy pipelines with gates and rollbacks, and an end to flaky end-to-end suites."
   - icon: cost
     title: "Cloud cost"
     text: "Spend audits with attribution per service, savings plans and right-sizing, NAT and egress analysis, and removal of what nobody uses. Findings first, then the changes."
   - icon: shield
     title: "Security and compliance"
-    text: "The infrastructure side of ISO 27001 and Cyber Essentials with Vanta, WAF in front of public endpoints, secrets in Vault, image and CVE hygiene, and answers for customer security questionnaires."
+    text: "The infrastructure side of ISO 27001 and Cyber Essentials with Vanta or Drata, WAF in front of public endpoints, secrets in Vault, image and CVE hygiene, and answers for customer security questionnaires."
   - icon: activity
     title: "Observability and on-call"
     text: "Prometheus, Grafana and Loki set up properly, alerts tuned so they page only when it matters, incident playbooks, and the fixes that stop the same incident coming back."

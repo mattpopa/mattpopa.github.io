@@ -1,7 +1,7 @@
 ---
 title: "System Administrator Appreciation Day"
 date: 2025-07-25
-author: "Matt Popa"
+author: "Matei Popa"
 hiddenInHomeList: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Cluster Autoscaler VS Karpenter"
 date: 2025-01-26
-author: "Matt Popa"
+author: "Matei Popa"
 ---
 
 ![microservices_vs_serverless](/images/microservices_vs_serverless.jpg)

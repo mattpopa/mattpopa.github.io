@@ -1,7 +1,7 @@
 ---
 title: "DevOps and DevOps Accessories"
 date: 2024-02-10
-author: "Matt Popa"
+author: "Matei Popa"
 hiddenInHomeList: true
 ---
 
